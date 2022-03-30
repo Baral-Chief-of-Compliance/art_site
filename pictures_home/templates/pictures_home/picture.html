@@ -1,0 +1,25 @@
+{% extends 'pictures_home/base.html' %}
+
+
+{% block title %}
+{{ picture.name }}
+{% endblock %}
+
+{% block content %}
+<h1 class="name">{{ picture.name }}</h1>
+<div class = "for_picture">
+<img  src = "{{ picture.picture.url }}" alt ="{{ picture.name }}">
+</div>
+<ul class="text">
+	<li><b>Художник:</b> <a href = "/artists/{{artist}}">{{ picture.artist }}</a></li>
+	<li><b>Стиль:</b> {{ picture.style }}</li>
+	<li><b>Дата создания:</b> {{ picture.date_of_create}}</li>
+	<li><b>Описание картины:</b> {{ picture.discribe }}</li>
+	
+</ul>
+
+
+
+
+
+{% endblock %}

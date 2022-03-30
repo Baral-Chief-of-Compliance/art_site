@@ -1,0 +1,23 @@
+{% extends 'pictures_home/base.html' %}
+
+
+{% block title %}
+Картина
+{% endblock %}
+
+
+{% block content %}
+
+<div class = "container">
+	{% for picture in pictures %}
+		
+			<div class = "scale">	<a href = "/pictures/{{picture.id}}"><img src = "{{ picture.picture.url }}" width = "200" height="200" alt ="{{ picture.name }}"></a></div>
+
+	
+
+	{% empty %}
+		Еще не один художник не был добавлен
+	{% endfor %}
+</div>
+
+{% endblock %}

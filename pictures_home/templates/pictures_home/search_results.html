@@ -1,0 +1,23 @@
+{% extends 'pictures_home/base.html' %}
+
+
+{% block title %}
+Результаты поиска
+{% endblock %}
+
+
+{% block content %}
+<h1 class = "name">Результаты поиска</h1>
+<ul>
+	{% for picture in object_list %}
+		<li>
+
+			<h2 class="name"><a href = "/pictures/{{picture.id}}">{{ picture.name }}</a></h2>
+		</li>
+
+	{% empty %}
+		<h1 class="name">По вашему запросу ничего не найдено</h1>
+	{% endfor %}
+
+</ul>
+{% endblock %}

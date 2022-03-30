@@ -1,0 +1,33 @@
+{% extends 'pictures_home/base.html' %}
+
+
+{% block title %}
+{{ artist.name }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="name">{{ artist.name }}</h1>
+<div class = "for_picture">
+<img src={{artist.photo.url}}>
+</div>
+<ul class = "text">
+<li><b>Дата рождения:</b> {{ artist.date_of_born }}</li>
+<li><b>Дата смерти:</b> {{ artist.date_of_death }}</li>
+<li><b>Биография:</b> {{ artist.history }}</li>
+</ul>
+<h2 class="name">Представленные работы:</h2>
+
+<div class = "container">
+	{% for picture in pictures %}
+	
+		<!--<p>{{ picture.name }}</p>-->
+		<div class = "scale container"><a href = "/pictures/{{picture.id}}"><img src = "{{ picture.picture.url }}" width = "200" height="200" alt ="{{ picture.name }}"></a></div>
+
+
+	
+	{% empty %}
+		Еще ни одна картина не была добавлена 
+	{% endfor %}
+</div>
+{% endblock %}

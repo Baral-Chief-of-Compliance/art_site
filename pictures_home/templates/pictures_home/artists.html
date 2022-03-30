@@ -1,0 +1,23 @@
+{% extends 'pictures_home/base.html' %}
+
+
+{% block title %}
+Художники
+{% endblock %}
+
+{% block content %}
+
+<div = class = "container">
+	{% for artist in artists %}
+		
+
+			<div class = "scale"><a href = "/artists/{{artist.id}}"><img src = "{{ artist.photo.url }}" width = "200" height="200" alt ="{{ picture.name }}"></a></div>
+
+		
+
+	{% empty %}
+		Еще не один художник не был добавлен
+	{% endfor %}
+
+</div>
+{% endblock %}

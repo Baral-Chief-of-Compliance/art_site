@@ -1,0 +1,24 @@
+{% extends 'pictures_home/base.html' %}
+{% load static %}
+
+{% block title %}
+Картинки
+{% endblock %}
+
+{% block content %}
+<div class = "container_carousel">
+<div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul>
+        <li><img src= {% static 'pictures_home/for_home_3.jpg' %}></li>
+        <li><a href = "{% url 'pictures' %}"><img src= {% static 'pictures_home/for_home_1.jpg' %}></li></a>
+        <li><a href = "{% url 'artists' %}"><img src= {% static 'pictures_home/for_home_2.jpg' %}></a></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+    </div>
+</div>
+<script type="text/javascript" src={% static "pictures_home/slider.js"%}></script>
+
+{% endblock %}>

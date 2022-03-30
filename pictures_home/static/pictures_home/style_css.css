@@ -1,0 +1,316 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+header{
+	width: 100%;
+	/*background: #085486;*/
+	background: #6c0202;
+	display: flex;
+
+}
+
+.header__logo{
+	margin-top: 38px;
+	margin-left: 12%;
+
+}
+
+.text_header_logo{
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 24px;
+	color:  #e2d8ce;
+	margin-top: 56px;
+	margin-left: 0%;
+}
+
+
+nav{
+	margin-top: 56px;
+	margin-left: 10%;
+	margin-bottom: 56px ;
+}
+.topnav a{
+	color: #e2d8ce;
+	text-align: center;
+	padding: 12px 16px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.topnav a:hover{
+	background: #221b12;
+	transition: background 0.5s ease;
+}
+
+.topnav .icon{
+	display: none;
+}
+
+
+img {
+
+	object-fit: cover;
+	object-position: 50% 50%;
+	
+}
+.scale{
+	display: inline-block;
+	overflow: hidden;
+	border: 10px solid transparent;
+}
+.scale img{
+	transition: 1s;
+	display: block;
+	border-image: linear-gradient(to right, transparent 0%, #ADF2F7 100%);
+	border-image-slice: 1;
+}
+.scale img:hover{
+	transform: scale(1.2);
+}
+.text{
+	text-align: left;
+	padding: 5% 20% 5% 20%;
+	line-height: 1.5;
+	list-style-type: none;
+}
+.text_name{
+	padding: 2% 0% 2% 0%;
+}
+
+.container{
+	display:  flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 2%;
+}
+form{
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+}
+input{
+	width: 100%;
+	height: 42px;
+	padding-left: 10px;
+	border: 3px solid #7BA7AB;
+	border-radius: 5px;
+	outline: none;
+	background: #F9F0DA;
+	color: #9E9C9C;
+}
+ button.search{
+	position: absolute;
+	top: 0;
+	right: 1px;
+	height: 42px;
+	border: none;
+	background: #7BA7AB;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+button.search:before{
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 16px;
+	color: #F9F0DA;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+html,body{
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+body{
+	background: #f6decb/*#fda600*/;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content{
+	margin-top: 56px;
+	flex: 1 0 auto;
+}
+
+.footer{
+	flex: 0 0 auto;
+	color: #e2d8ce;
+	background: #6c0202/*#085486*/;
+	text-align: center;
+	padding: 20px 40px 80px;
+}
+
+h1.name{
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+
+}
+h2.name{
+	display: flex;
+	justify-content: center;
+	padding: 1%;
+
+}
+.for_picture{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.search_bar{
+	margin-top: 56px;
+	margin-left: 11%;
+}
+
+
+@media screen and (max-width: 1400px){
+		
+		.topnav a{
+			display: none;
+		}
+		.topnav a.icon{
+			float: right;
+			margin-top: -17px;
+			display: block;
+			font-size: 25px;
+		}
+		nav{
+			width: 100%;
+			margin-left: 2%;
+		}
+
+		.topnav.responsive{
+			position: relative;
+			top:  50px;
+			left: -200px;
+		}
+
+		header .topnav.responsive{
+			height: 340px;
+		}
+
+		.topnav.responsive a.icon{
+			position: absolute;
+			top: -50px;
+			right: -200px;
+		}
+		.topnav.responsive a{
+			float: none;
+			display: block;
+			text-align: left;
+		}
+		@media screen and (max-width: 850px){
+			.search_bar{
+				margin-left: 2%
+			}
+			form{
+				
+				width: 250px;
+				
+			}
+			button.search:before{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			.text_header_logo{
+				display: none;
+			}
+			.header__logo{
+				margin-left: 2%;
+			}
+
+
+		}
+		
+
+	}
+
+
+
+.container_carousel{
+	display:  flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 1500px;
+  padding: 10px 40px;
+  border: 1px solid #CCC;
+  border-radius: 15px;
+  background: #eee;
+}
+
+.carousel img {
+  width: 1400px;
+  height: 740px;
+  /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
+  display: block;
+
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.prev {
+  left: 7px;
+}
+
+.next {
+  right: 7px;
+}
+
+.gallery {
+  width: 1400px;
+  overflow: hidden;
+}
+
+.gallery ul {
+  height: 740px;
+  width: 4200px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+  font-size: 0;
+}
+
+.gallery li {
+  display: inline-block;
+}
